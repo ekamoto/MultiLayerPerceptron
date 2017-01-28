@@ -1,36 +1,29 @@
 # Alunos: Leandro Shindi Ekamoto, Diego Takaki
-# Leia readme
-#
-#
-#
+# 28/01/2017
 #
 
-Não criamos um padrão para comandos
-Utilizamos o dataset disponibilizado pelo professor
-Quando digita a tecla 't' separei 30% para teste
-Criei uma classe RedeNeural que está no arquivo anyCamera.py
+Foi criado um padrão para aprendizado da rede neural para identificar através da
+webcam as direções cima, baixo, esquerda e direita.
+
+Quando digita a tecla 't' é realizado o treinamento da rede com o dataset coletado pelo usuário
+Criei uma classe RedeNeural que possui uma camada oculta com 12 neurônios
 Criei a matriz de entrada com os seus classificadores
-Para testar passei apenas as imagens da classe 4:
--------------------------------------------------
-  for listax in X_train:
-        lista_y = [y_train[self.cont]]
-        #lista_modelo[self.cont][1] = lista_y
-        #lista_modelo[self.cont][0] = listax
 
-        if(lista_y == [4]):
-            #print listax
-            matrix.append([listax, lista_y])
--------------------------------------------------
-Passei a entrada para a RedeNeural
+Para a classificação normalizei os frames das imagens dividindo cada valor
+da matriz por 100 e reduzi o intervalo das classes para facilitar o aprendizado
+dividindo o valor das classes por 10.
+Utilizei a taxa de aprendizado igual a 0.01
+
 Deixei debugando a mensagem:
   ---------------------------------------
-  Saida Desejada_2:4
-  Ativacao Saida_2:0.999817243868
-  Erro_2:3.00018275613
+  Saida Desejada: 0.11
+  Ativacao Saida: 0.22
+  Erro: 0.11
   ---------------------------------------
-  Nessa mensagem demonstro que a rede está aprendendo classe 4, se for observado o Erro ele
-  está diminuindo a cada iteração porém muito lentamente, não sei o motivo, tentei alterar os
-  pesos e a taxa de aprendizagem mas não consegui
+  Nessa mensagem demonstro que a rede está aprendendo a cada iteração.
+  A taxa de erro é replicado proporcionalmente para os neurônios da camada oculta
 
-Obs:
-Não tive tempo para tirar dúvida com o senhor mas isso foi o que conseguimos fazer
+Foi separado 70% dos dados para treinamento e 30% para teste
+Foi gerado a matriz de confusão para analisar o valor estimado e o valor gerado pela rede neural
+Foi criado a função predict que analisa em tempo real as imagens capturadas pela webcam e passa para
+a rede neural que já possui os seus pesos calibrados pelo treinamento e retorna o que foi aprendizado
