@@ -1,6 +1,6 @@
 # Alunos: Leandro Shindi Ekamoto, Diego Takaki
+# Professor: D.r Edson Takashi Matsubara
 # 28/01/2017
-#
 
 Foi criado um padrão para aprendizado da rede neural para identificar através da
 webcam as direções cima, baixo, esquerda e direita.
