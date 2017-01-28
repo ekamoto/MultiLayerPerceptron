@@ -1,0 +1,36 @@
+# Alunos: Leandro Shindi Ekamoto, Diego Takaki
+# Leia readme
+#
+#
+#
+#
+
+Não criamos um padrão para comandos
+Utilizamos o dataset disponibilizado pelo professor
+Quando digita a tecla 't' separei 30% para teste
+Criei uma classe RedeNeural que está no arquivo anyCamera.py
+Criei a matriz de entrada com os seus classificadores
+Para testar passei apenas as imagens da classe 4:
+-------------------------------------------------
+  for listax in X_train:
+        lista_y = [y_train[self.cont]]
+        #lista_modelo[self.cont][1] = lista_y
+        #lista_modelo[self.cont][0] = listax
+
+        if(lista_y == [4]):
+            #print listax
+            matrix.append([listax, lista_y])
+-------------------------------------------------
+Passei a entrada para a RedeNeural
+Deixei debugando a mensagem:
+  ---------------------------------------
+  Saida Desejada_2:4
+  Ativacao Saida_2:0.999817243868
+  Erro_2:3.00018275613
+  ---------------------------------------
+  Nessa mensagem demonstro que a rede está aprendendo classe 4, se for observado o Erro ele
+  está diminuindo a cada iteração porém muito lentamente, não sei o motivo, tentei alterar os
+  pesos e a taxa de aprendizagem mas não consegui
+
+Obs:
+Não tive tempo para tirar dúvida com o senhor mas isso foi o que conseguimos fazer
