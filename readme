@@ -26,4 +26,4 @@ Deixei debugando a mensagem:
 Foi separado 70% dos dados para treinamento e 30% para teste
 Foi gerado a matriz de confusão para analisar o valor estimado e o valor gerado pela rede neural
 Foi criado a função predict que analisa em tempo real as imagens capturadas pela webcam e passa para
-a rede neural que já possui os seus pesos calibrados pelo treinamento e retorna o que foi aprendizado
+a rede neural que já possui os seus pesos calibrados pelo treinamento e retorna o que foi aprendido
